@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from "../components/Layout";
 
-export default function Currency({res}) {
+const Currency = ({res})=> {
     console.log(res)
     return (
         <Layout page={"Page " + res.name}>
@@ -24,6 +24,7 @@ export default function Currency({res}) {
         </Layout>
     );
 };
+export default Currency;
 
 export async function getServerSideProps({query}) {
     console.log(query.currency)
